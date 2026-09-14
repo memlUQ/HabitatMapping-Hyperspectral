@@ -25,7 +25,7 @@ Any in situ training data can be used for training and validation (not just deri
 | ---------- | ---------- | ---------- |
 | Longitude in decimal degrees (float) | Latitude in decimal degrees (float) | Percentage cover of benthic features at each field data point (from 0 -> 100) |
 
-Section 2 (b) also has a few lines to retain some metadata, if required. Currently, it retains the image_name, yearmonth, and data_UTC columns. This requires manual adjustment if columns are named differently.
+Section 2 (b) also has a few lines to retain some metadata, if required. Currently, it retains the `image_name` (string), `yearmonth` (integer), and `date_UTC` (string) columns. This requires manual adjustment if columns are named differently.
 
 > [!NOTE]
 > There are a number of columns in the _benthic cover details_ section equal to the number of benthic classes (see `HR_202411.csv` as an example).
