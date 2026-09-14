@@ -6,21 +6,18 @@ Python based habitat mapping scripts for repeated creation of benthic cover maps
 - Habitat map classification.
 
 # Field Data Pre-Processing (Optional)
-Classified photoquadrat data from [ReefCloud](https://reefcloud.ai/) is reorganised into the desired benthic classes required for creating habitat maps. Field data is aggregated into thematic classes in the `00_ClassAssignment.py` script. Thematic class assignments are separated by site and require user specification for modification per site, with two specific input spreadsheets. Example input spreadsheets are provided here for the Heron Reef site as `HR_202411.csv` and `HR_labelmap.csv`.
+See: `00_ClassAssignment.py`
+
+> [!IMPORTANT]
+> Packages required to run this script: [NumPy](https://numpy.org/), [pandas](https://pandas.pydata.org/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
+
+Classified photoquadrat data from [ReefCloud](https://reefcloud.ai/) is reorganised into the desired benthic classes required for creating habitat maps. Field data is aggregated into thematic classes separated by site, which require user specification for modification, with two specific input spreadsheets. Example input spreadsheets are provided here for the Heron Reef site as `HR_202411.csv` and `HR_labelmap.csv`.
 
 > [!NOTE]
 > Paths for input and output folder/files need to be changed to fit the users location and name of field data files. Thematic classes and class assignment thresholds also need to be adjusted from those existing in this script.
 
 > [!IMPORTANT]
 > Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
-
-> [!IMPORTANT]
-> This script requires the following packages:
-> - `numpy`
-> - `pandas`
-> - `os`
-> - `sys`
-> - `time`
 
 ## Field Data
 Any in situ training data can be used for training and validation (not just derived from ReefCloud), requiring the following fields as a spreadsheet in a `.csv` format (e.g., as in `HR_202411.csv`):
