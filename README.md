@@ -11,11 +11,25 @@ Classified photoquadrat data from [ReefCloud](https://reefcloud.ai/) is reorgani
 > [!NOTE]
 > Paths for input and output folder/files need to be changed to fit the users location and name of field data files. Thematic classes and class assignment thresholds also need to be adjusted from those existing in this script.
 
+> [!IMPORTANT]
+> Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
+
+> [!IMPORTANT]
+> This script requires the following packages:
+> - `numpy`
+> - `pandas`
+> - `os`
+> - `sys`
+> - `time`
+
 ## Field Data
 Any in situ training data can be used for training and validation (not just derived from ReefCloud), requiring the following fields as a spreadsheet in a `.csv` format (e.g., as in `HR_202411.csv`):
 | Longitude | Latitude | _benthic cover details_ |
 | ---------- | ---------- | ---------- |
-| Longitude in decimal degrees (float) | Latitude in decimal degrees (float) | Percentage cover of benthic features at each field data point (from 0 -> 100) (_Note: there are a number of columns here equal to the number of benthic classes_ |
+| Longitude in decimal degrees (float) | Latitude in decimal degrees (float) | Percentage cover of benthic features at each field data point (from 0 -> 100) |
+
+> [!NOTE]
+> There are a number of columns in the _benthic cover details_ section equal to the number of benthic classes (see `HR_202411.csv` as an example).
 
 ## Thematic Classes
 Benthic classes are aggregated into thematic classes using the label mapping provided in the second input sreadsheet (e.g., as in `HR_labelmap.csv`). The label mapping input provides a key for class aggregation and requires user specification to ensure labels are correctly assigned between **benthic classes** and **thematic classes**. This input requires the following columns at mininum:
