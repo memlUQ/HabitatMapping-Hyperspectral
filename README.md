@@ -15,7 +15,7 @@ Classified photoquadrat data from [ReefCloud](https://reefcloud.ai/) is reorgani
 Any in situ training data can be used for training and validation (not just derived from ReefCloud), requiring the following fields as a spreadsheet in a `.csv` format (e.g., as in `HR_202411.csv`):
 | Longitude | Latitude | _benthic cover details_ |
 | ---------- | ---------- | ---------- |
-| Longitude in decimal degrees (float) | Latitude in decimal degrees (float) | Percentage cover of benthic features at each field data point (from 0 -> 100) |
+| Longitude in decimal degrees (float) | Latitude in decimal degrees (float) | Percentage cover of benthic features at each field data point (from 0 -> 100) (_Note: there are a number of columns here equal to the number of benthic classes_ |
 
 ## Thematic Classes
 Benthic classes are aggregated into thematic classes using the label mapping provided in the second input sreadsheet (e.g., as in `HR_labelmap.csv`). The label mapping input provides a key for class aggregation and requires user specification to ensure labels are correctly assigned between **benthic classes** and **thematic classes**. This input requires the following columns at mininum:
