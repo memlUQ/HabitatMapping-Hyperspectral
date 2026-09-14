@@ -5,6 +5,10 @@ Python based habitat mapping scripts for repeated creation of benthic cover maps
 - Calibration/validation assignment.
 - Habitat map classification.
 
+> [!WARNING]
+> Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
+> These scripts were written with Python v3.10.
+
 # Field Data Pre-Processing (Optional)
 See: `00_ClassAssignment.py`
 
@@ -15,9 +19,6 @@ Classified photoquadrat data from [ReefCloud](https://reefcloud.ai/) is reorgani
 
 > [!NOTE]
 > Paths for input and output folder/files need to be changed to fit the users location and name of field data files. Thematic classes and class assignment thresholds also need to be adjusted from those existing in this script.
-
-> [!IMPORTANT]
-> Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
 
 ## Field Data
 Any in situ training data can be used for training and validation (not just derived from ReefCloud), requiring at least the following fields as a spreadsheet in a `.csv` format (e.g., as in `HR_202411.csv`):
