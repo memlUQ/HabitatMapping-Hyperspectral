@@ -5,6 +5,8 @@ Python based habitat mapping scripts for repeated creation of benthic cover maps
 - Calibration/validation assignment.
 - Habitat map classification.
 
+Each script has a **user input** section just under the package imports. Any major changes required to produce output at different sites than those described here will be made in this section. If any further changes are required, these are specified where relevant below.
+
 > [!WARNING]
 > - Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
 > - These scripts were written with Python v3.10.
