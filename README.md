@@ -6,14 +6,14 @@ Python based habitat mapping scripts for repeated creation of benthic cover maps
 - Habitat map classification.
 
 > [!WARNING]
-> Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
-> These scripts were written with Python v3.10.
+> - Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
+> - These scripts were written with Python v3.10.
 
 # Field Data Pre-Processing (Optional)
 See: `00_ClassAssignment.py`
 
 > [!IMPORTANT]
-> Packages required to run this script: [NumPy](https://numpy.org/), [Pandas](https://pandas.pydata.org/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
+> Packages required: [NumPy](https://numpy.org/), [Pandas](https://pandas.pydata.org/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
 Classified photoquadrat data from [ReefCloud](https://reefcloud.ai/) is reorganised into the desired benthic classes required for creating habitat maps. Field data is aggregated into thematic classes separated by site, which require user specification for modification, with two specific input spreadsheets. Example input spreadsheets are provided here for the Heron Reef site as `HR_202411.csv` and `HR_labelmap.csv`.
 
@@ -38,7 +38,10 @@ Benthic classes are aggregated into thematic classes using the label mapping pro
 | Thematic mapping class that will be used to aggregate the **Field Data** | Class labels derived from the **Field Data** spreadsheet |
 
 # Image Pre-Processing
-Description...
+See: `01_ImageProcessing.py`
+
+> [!IMPORTANT]
+> Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Matplotlib](https://matplotlib.org/), [scikit-learn](https://scikit-learn.org/stable/), [scikit-image](https://scikit-image.org/), [SciPy](https://scipy.org/), [NumPy](https://numpy.org/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
 # Points Processing
 Description...
