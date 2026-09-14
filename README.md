@@ -46,10 +46,20 @@ See: `01_ImageProcessing.py`
 > [!IMPORTANT]
 > Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Matplotlib](https://matplotlib.org/), [scikit-learn](https://scikit-learn.org/stable/), [scikit-image](https://scikit-image.org/), [SciPy](https://scipy.org/), [NumPy](https://numpy.org/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
-Image preprocessing here includes ROI masking, white whater masking, calculation of basic statistics, removal of unnecessary bands, inclusion of supporting physical information (depth, slope, or waves), image texture (using a grey-level co-occurrence matrix), and image segmentation via Simple Linear Iterative Clustering (SLIC). 
+> [!WARNING]
+> Depth information **must** be included in this preprocessing stage as it is used for masking and subsequent classification. If depth data is not available, this script will need to be modified (mostly in section 5 and 6).
+
+Image preprocessing here includes ROI masking, white whater masking, calculation of basic statistics, removal of unnecessary bands, inclusion of supporting physical information (depth, slope, or waves), principal components analysis (PCA), image texture (using a grey-level co-occurrence matrix), and image segmentation via Simple Linear Iterative Clustering (SLIC). As a result, the script requires **bathymetry** (as a `.tiff`) and a **region of interest** file (as a shapefile).
+
+Other important specifications include the designation of which red, green, and blue bands to consider for analysis and those for visualisation. As the script is setup at the current stage, an equal number of red, green, and blue bands are required for image statistics, but only one of each is required for visualisation.
+
+The processed, segmented image is exported as a raster (`.tiff`) which includes all statistical layers, the first three principal components, texture metrics, physical layers, and image segment information.
 
 # Points Processing
-Description...
+See: `02_PointsProcessing.py`
+
+> [!IMPORTANT]
+> Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Pandas](https://pandas.pydata.org/), [Matplotlib](https://matplotlib.org/), [NumPy](https://numpy.org/), [Shapely](https://shapely.readthedocs.io/en/stable/), [zarr-python](https://zarr.readthedocs.io/en/stable/), [warnings](https://docs.python.org/3/library/warnings.html), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
 # Image Classification
 Description...
