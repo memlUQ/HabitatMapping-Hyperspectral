@@ -61,11 +61,13 @@ See: `02_PointsProcessing.py`
 > [!IMPORTANT]
 > Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Pandas](https://pandas.pydata.org/), [Matplotlib](https://matplotlib.org/), [NumPy](https://numpy.org/), [Shapely](https://shapely.readthedocs.io/en/stable/), [zarr-python](https://zarr.readthedocs.io/en/stable/), [warnings](https://docs.python.org/3/library/warnings.html), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
+This script assigns the reclassified field data (from `00_ClassAssignment.py` or defined manually) into calibration and validation data. Field data are aggregated spatially, dependent on pixel size, to ensure one representative point is used for a specific pixel if multiple field observations are contained within. Cal/val data is then split using a uniform random sampling approach 1,000 times....
+
 # Image Classification
 Description...
 
 # See Also
-The [Habitat Mapping](https://github.com/memlUQ/HabitatMapping) scripts for continuous multispectral habitat mapping.
+Existing MEML UQ multispectral [Habitat Mapping](https://github.com/memlUQ/HabitatMapping) scripts for continuous multispectral habitat mapping.
 
 # References
 Description...
