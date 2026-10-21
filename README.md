@@ -63,13 +63,20 @@ See: `02_PointsProcessing.py`
 > [!IMPORTANT]
 > Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Pandas](https://pandas.pydata.org/), [Matplotlib](https://matplotlib.org/), [NumPy](https://numpy.org/), [Shapely](https://shapely.readthedocs.io/en/stable/), [zarr-python](https://zarr.readthedocs.io/en/stable/), [warnings](https://docs.python.org/3/library/warnings.html), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
-This script assigns the reclassified field data (from `00_ClassAssignment.py` or defined manually) into calibration and validation data. Field data are aggregated spatially, dependent on pixel size, to ensure one representative point is used for a specific pixel if multiple field observations are contained within. Cal/val data is then split using a uniform random sampling approach 1,000 times....
+This script assigns the reclassified field data (from `00_ClassAssignment.py` or defined manually) into calibration and validation data. Field data are aggregated spatially, dependent on pixel size, to ensure one representative point is used for a specific pixel if multiple field observations are contained within. Cal/val data is then split using a uniform random sampling approach 100 times and the training scenarios are saved into a zarr store to be read by the classification script in subsequent stages. This script also ensures the number of cal/val points for thematic classes are balanced, with no single class dominating the training dataset. As such, if one class has a very small number of training points available for cal/val assignment, the other classes will also have a smaller number of training points to ensure there is no major class imbalances. It is recommended to investigate the plots produced by this script to see the balance of cal/val points across all thematic classes and reassign or reassess thematic classes where necessary.
 
 # Image Classification
-See: `03_ImageProcessing.py`
+See: `03_Classification.py`
 
 > [!IMPORTANT]
 > Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [scikit-learn](https://scikit-learn.org/stable/), [zarr-python](https://zarr.readthedocs.io/en/stable/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
+
+> [!IMPORTANT]
+> This script has 4 dependent scripts (`classKNN.py`, `classMLC.py`, `classRF.py`, and `classSVM.py`), which contain the classification functions and parameters used for each classification methodology.
+
+This script provides a thematic classification for the segmented image from `01_ImageProcessing.py` using the training data in `02_PointsProcessing.py` and, as such, requires these scripts to be run first. The classification methodology is user defined, with other specifics drawn from the params file. Note that the script also contains specific bands that are used for classification, which is sensor dependent. It is recommended to investigate the **user input** section and adjust where necessary. 
+
+Each image is classified with the defined methodology 100 times, using the predefined training scenarios from `02_PointsProcessing.py`. A raster file for the classification with the best overall accuracy is produced, along with ccuracy metrics (overall, user's, and producer's accuracies) and summary raster files that show the probability of assignment at each pixel, per thematic class. This probability is derived from the 100 classified images, showing the chance that each pixel is assigned to a specific thematic class, giving an indication of classification variability and persistence.
 
 # See Also
 Existing MEML UQ multispectral [Habitat Mapping](https://github.com/memlUQ/HabitatMapping) scripts for continuous multispectral habitat mapping.
