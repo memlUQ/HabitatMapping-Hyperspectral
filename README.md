@@ -9,6 +9,8 @@ Python based habitat mapping scripts for repeated creation of benthic cover maps
 > Several variables are defined in the separate `params.py` file, which is imported into all scripts used here.
 > 
 > Each script has a **user input** section just under the package imports. Any major changes required to produce output at different sites than those described here will be made in this section. If any further changes are required, these are specified where relevant below.
+>
+> The HPC version of these scripts also utilises the package [argparse](https://docs.python.org/3/library/argparse.html).
 > 
 > These scripts were written with Python v3.10.
 
@@ -64,7 +66,10 @@ See: `02_PointsProcessing.py`
 This script assigns the reclassified field data (from `00_ClassAssignment.py` or defined manually) into calibration and validation data. Field data are aggregated spatially, dependent on pixel size, to ensure one representative point is used for a specific pixel if multiple field observations are contained within. Cal/val data is then split using a uniform random sampling approach 1,000 times....
 
 # Image Classification
-Description...
+See: `03_ImageProcessing.py`
+
+> [!IMPORTANT]
+> Packages required: [GeoPandas](https://geopandas.org/en/stable/), [Rasterio](https://rasterio.readthedocs.io/en/stable/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [scikit-learn](https://scikit-learn.org/stable/), [zarr-python](https://zarr.readthedocs.io/en/stable/), [os](https://docs.python.org/3/library/os.html), [sys](https://docs.python.org/3/library/sys.html), and [time](https://docs.python.org/3/library/time.html).
 
 # See Also
 Existing MEML UQ multispectral [Habitat Mapping](https://github.com/memlUQ/HabitatMapping) scripts for continuous multispectral habitat mapping.
