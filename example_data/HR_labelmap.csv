@@ -1,0 +1,50 @@
+map_group,class_label
+algae,Macroalgae Other
+sand,Benthic Microalgae on Sand
+rock,Crustose Coralline Algae
+algae,Caulerpa spp.
+algae,Chlorodesmis spp.
+algae,Dictyota spp.
+rock,Epithelial Algal Matrix on DHC
+rock,Epithelial Algal Matrix on Rubble
+algae,Halimeda spp.
+algae,Padina spp.
+algae,Cyanobacteria
+coral,Acroporidae Arborescent
+coral,Acroporidae: Acropora spp. Hispidose
+coral,Acroporidae: Isopora spp. Branching/Encrusting
+coral,Small Corallite Plate/Encrusting
+coral,Acroporidae: Acropora spp. Corymbose
+coral,Acroporidae: Acropora spp. Digitate
+coral,Branching Other
+coral,Acroporidae: Acropora spp. Tabulate
+coral,Ceroid Massive/Encrusting (shared walls)
+coral,Meandroid Massive/Encrusting (meandering walls)
+coral,Free Living Coral
+coral,Plocoid Massive/Encrusting (separate walls)
+coral,Pocilloporidae
+coral,Poritidae: Porites spp. Branching
+coral,Poritidae Massive/Encrusting
+coral,Plate/Foliose with Ridges
+coral,Plate/Foliose with Round Corallites
+coral,Acroporidae Arborescent Bleached
+coral,Acroporidae: Acropora spp. Hispidose Bleached
+coral,Plate/Foliose/Encrusting Bleached
+coral,Acroporidae: Acropora spp. Corymbose Bleached
+coral,Acroporidae: Acropora spp. Digitate Bleached
+coral,Branching Other Bleached
+coral,Acroporidae: Acropora spp. Tabulate Bleached
+coral,Ceroid Massive/Encrusting Bleached (shared walls)
+coral,Meandroid Massive/Encrusting Bleached (meandering walls)
+coral,Free Living Coral Bleached 
+coral,Plocoid Massive/Encrusting Bleached (separate walls)
+coral,Pocilloporidae Bleached
+coral,Small Corallite Massive/Encrusting Bleached
+other,Transect gear
+other,Mobile Invertebrate
+other,Sessile Invertebrate Other
+other,Fish
+other,Shadow
+sand,Sand 
+coral,Soft Coral Other 
+coral,Gorgonian
