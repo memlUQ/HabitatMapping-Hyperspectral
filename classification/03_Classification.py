@@ -63,11 +63,6 @@ classification_output = os.path.join(pwd, '06_classified_imagery', YEAR_MONTH, M
 accuracy_output = os.path.join(pwd, '07_accuracy', YEAR_MONTH, METHOD, SITE_ID+'_'+SENSOR+'_accuracy_'+YEAR_MONTH+'.csv')
 mc_class_probability_output = os.path.join(pwd, '07_accuracy', YEAR_MONTH, METHOD, SITE_ID+'_'+SENSOR+'_MC_class_probability_'+YEAR_MONTH+'.tif')
 
-# extra outputs
-probability_output = os.path.join(pwd, '07_accuracy', YEAR_MONTH, METHOD, SITE_ID+'_'+SENSOR+'_probability_'+YEAR_MONTH+'.tif')
-history_output = os.path.join(pwd, '07_accuracy', YEAR_MONTH, METHOD, SITE_ID+'_'+SENSOR+'_training_history_'+YEAR_MONTH+'.csv')
-confidence_output = os.path.join(pwd, '07_accuracy', YEAR_MONTH, METHOD, SITE_ID+'_'+SENSOR+'_confidence_'+YEAR_MONTH+'.tif')
-
 # create output directory if it doesn't exist
 os.makedirs(os.path.join(pwd, '06_classified_imagery', YEAR_MONTH, METHOD), exist_ok=True)
 os.makedirs(os.path.join(pwd, '07_accuracy', YEAR_MONTH, METHOD), exist_ok=True)
