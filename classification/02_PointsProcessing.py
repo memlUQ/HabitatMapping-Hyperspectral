@@ -29,7 +29,6 @@ print("Defining user input...", end=" ")
 # --------------- (a) set main constants ---------------
 CAL_PER = 80 # percentage of field data used for calibration
 N_MC = 100 # number of Monte Carlo iterations
-SAMP_SEED = 42 # specific seed for initiation
 
 # --------------- (b) define red, green, and blue bands ---------------
 if SENSOR == 'Planet':
