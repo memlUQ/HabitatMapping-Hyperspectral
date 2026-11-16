@@ -131,6 +131,7 @@ print("done.\nSuccess! Mapping classes defined.")
 print('{0:.2f} seconds elapsed.'.format(time.time()-s))
 
 # %% (4) EXPORT CLASS DATA
+# --------------- (a) setup asset directories and define file names ---------------
 print("\nExporting aggregated data...", end=" ")
 s = time.time()
 
