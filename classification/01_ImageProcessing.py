@@ -29,7 +29,8 @@ from params import DEPTH_MAX # depth extent
 print("Defining user input...", end=" ")
 s = time.time()
 
-# to manually define the number of segments in the segmentation step, edit the n_segments variable on line 507
+# to manually define the number of segments in the segmentation step, edit the n_segments variable on line 510
+# (if you go to line 510 and the n_segments variable isn't there it means I forgot to update this comment, sorry)
 
 # --------------- (a) define band specifics ---------------
 if SENSOR == 'Planet':
